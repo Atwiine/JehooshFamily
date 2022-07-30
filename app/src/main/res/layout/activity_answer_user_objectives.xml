@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.UserSection.AnswerUserObjectives">
+
+
+        <RelativeLayout
+            android:id="@+id/essay_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/obj_btns_sendheader">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:textSize="16sp"
+                android:text="Answer Objectives "
+                android:textColor="@color/colorWhite"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:onClick="goback"
+                android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+
+        </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/emplobj_to_answer_qn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:text="Sent Question"
+                    android:textColor="@color/black"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/empobj_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp"
+                    android:text="date"
+                    android:textColor="@color/black"
+                    android:textStyle="normal" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.9dp"
+                    android:background="@drawable/obj_btns_send" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:text="Options"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <RadioGroup
+                        android:id="@+id/group_empobj_opts"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <RadioButton
+                            android:onClick="checkRadioButtonClicked"
+                            android:id="@+id/em_opt_a"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="option A"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:onClick="checkRadioButtonClicked"
+                            android:id="@+id/em_opt_b"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="option B"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:onClick="checkRadioButtonClicked"
+                            android:id="@+id/em_opt_c"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="option C"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:onClick="checkRadioButtonClicked"
+                            android:id="@+id/em_opt_d"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="option D"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+
+                        <RadioButton
+                            android:onClick="checkRadioButtonClicked"
+                            android:id="@+id/em_opt_e"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:fontFamily="@font/poppins"
+                            android:text="option E"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:visibility="gone" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.9dp"
+                    android:background="@drawable/obj_btns_send" />
+
+
+                <TextView
+                    android:id="@+id/empobj_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/allerta_stencil"
+                    android:text="id"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/empobj_answerboss"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/allerta_stencil"
+                    android:text="id"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.9dp"
+                android:background="@drawable/obj_btns_send" />
+
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/obj_btns_send"
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp"
+                android:onClick="sendObjectives"
+                android:text="Send"
+                android:id="@+id/emp_objbnt"
+                android:textAllCaps="false"
+                android:textColor="@color/whiteText"
+                android:textStyle="bold" />
+
+            <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.FoldingCube"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="?selectableItemBackgroundBorderless"
+                android:visibility="gone"
+                app:SpinKit_Color="@color/colorAccent" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

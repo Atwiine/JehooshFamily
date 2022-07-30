@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:background="@color/whiteBodyColor"
+    android:orientation="vertical"
+    tools:context=".ui.ResponseSection.ResponseQnDrawing">
+
+
+        <RelativeLayout
+            android:id="@+id/essay_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/toolbar_drawing"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Drawing Responses"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:onClick="goback"
+                android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+            <ImageView
+                android:id="@+id/openfilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/montserrat"
+                android:onClick="openEditFilter"
+                android:src="@drawable/ic_search1"
+                android:text="filter"
+                android:textColor="@color/g2"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relaFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/editFilterEssay"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_filter"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/comfortaa_bold"
+            android:hint="Filter "
+            android:inputType="textPhonetic"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/gradientViolet" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_resp_drawing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/no_resp_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="You have no drawing responses"
+        android:textAlignment="center"
+        android:textColor="@color/cardColorRed"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.FoldingCube"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackgroundBorderless"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/colorAccent" />
+
+</LinearLayout>

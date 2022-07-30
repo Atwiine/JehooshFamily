@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigationHome"
+        android:icon="@drawable/ic_home"
+        android:enabled="true"
+        android:checked="true"
+        android:title="Home" />
+
+    <item
+        android:id="@+id/navigationAsk"
+        android:icon="@drawable/ic_ask_qn"
+        android:title="Ask" />
+
+    <item
+        android:id="@+id/navigationResponse"
+        android:icon="@drawable/ic_responses"
+        android:title="Response" />
+
+    <item
+        android:id="@+id/navigationHistory"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="History" />
+
+    <item
+        android:id="@+id/navigationSettings"
+        android:icon="@drawable/ic_settings"
+        android:title="Settings" />
+
+</menu>

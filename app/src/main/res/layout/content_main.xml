@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/parent.contentLayout"
+    android:orientation="vertical"
+    android:background="#00000000"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="ui.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/navigations"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_margin="8dp"
+                        style="@style/viewParent.headerText"
+                        android:layout_gravity="bottom"
+                        android:fontFamily="@font/poppins"
+                        android:text="Jehoash \nFamily" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/hero" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/ask_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="openAsk"
+                            android:layout_margin="10dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/home_gradient_maths"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    style="@style/homeCardImage"
+                                    android:layout_alignParentEnd="true"
+                                    android:maxHeight="70dp"
+                                    android:src="@drawable/askquestion" />
+
+                                <TextView
+                                    android:id="@+id/textViewSub1Title"
+                                    style="@style/viewParent.headerText.HomeCardTitle"
+                                    android:layout_centerVertical="true"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="Ask Questions"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/reponse_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:onClick="openResponses"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:minHeight="100dp"
+                                android:padding="10dp"
+                                android:background="@drawable/gradient_response"
+                                >
+
+                                <ImageView
+                                    style="@style/homeCardImage"
+                                    android:layout_alignParentEnd="true"
+                                    android:maxHeight="70dp"
+                                    android:src="@drawable/response" />
+
+                                <TextView
+                                    android:id="@+id/textViewSub1Titles"
+                                    style="@style/viewParent.headerText.HomeCardTitle"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="My Responses"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/add_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:onClick="openAddEmployee"
+                            android:visibility="visible"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:minHeight="100dp"
+                                android:padding="10dp"
+                                android:background="@drawable/gradient_users"
+                                >
+
+                                <ImageView
+                                    style="@style/homeCardImage"
+                                    android:maxHeight="70dp"
+                                    android:src="@drawable/adduser" />
+
+                                <TextView
+                                    android:id="@+id/textViewSub6Title"
+                                    style="@style/viewParent.headerText.HomeCardTitle"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="Add Users"
+                                    android:layout_centerVertical="true"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/registered_employees_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:onClick="openSeeEmployee"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/gradient_see_users"
+                                android:minHeight="100dp"
+                                android:padding="10dp">
+
+                                <ImageView
+                                    style="@style/homeCardImage"
+                                    android:maxHeight="70dp"
+                                    android:src="@drawable/seeuser" />
+
+                                <TextView
+                                    android:id="@+id/textViewSub2Title"
+                                    style="@style/viewParent.headerText.HomeCardTitle"
+                                    android:layout_centerVertical="true"
+                                    android:fontFamily="@font/poppins"
+                                    android:text="See Users"
+                                    android:textSize="14sp" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/history_card"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:onClick="openHistory"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="8dp"
+                            app:cardPreventCornerOverlap="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:minHeight="100dp"
+                                android:padding="10dp"
+                                android:background="@drawable/gradient_history">
+
+                                <ImageView
+                                    style="@style/homeCardImage"
+                                    android:maxHeight="70dp"
+                                    android:src="@drawable/history" />
+
+                                <TextView
+                                    android:id="@+id/textViewSub3Title"
+                                    style="@style/viewParent.headerText.HomeCardTitle"
+                                    android:fontFamily="@font/poppins"
+                                    android:textSize="14sp"
+                                    android:layout_centerVertical="true"
+                                    android:text="My History" />
+
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="?android:attr/windowBackground"
+        android:foreground="?attr/selectableItemBackground"
+        app:elevation="10dp"
+        app:labelVisibilityMode="labeled"
+        app:itemBackground="?attr/colorPrimary"
+        app:itemIconTint="@drawable/selector_bottombar_item"
+        app:itemTextColor="@drawable/selector_bottombar_item"
+        app:menu="@menu/master_bottom_navigation" />
+</RelativeLayout>

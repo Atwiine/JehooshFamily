@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.EmployeeSection.AnswerEmployeeEssay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/essay_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/gradient_essay"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@id/back_img"
+                android:fontFamily="@font/montserrat"
+                android:text="Answer Essays"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_margin="5dp"
+                android:onClick="goback"
+                android:src="@drawable/back_btn" />
+
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/resp_to_answer_qn_essay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="Sent Question"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/resp_to_answer_id_essay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/montserrat"
+                    android:text="id"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/resp_to_answer_date_essay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/allerta_stencil"
+                    android:text="date"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.9dp"
+                android:background="@drawable/gradient_essay" />
+
+            <AutoCompleteTextView
+                android:id="@+id/answer_emp_essay"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:ellipsize="end"
+                android:freezesText="true"
+                android:hint="Enter your answer here"
+                android:imeOptions="actionNext"
+                android:lines="2"
+                android:maxLength="10000"
+                android:nextFocusDown="@null"
+                android:selectAllOnFocus="true"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+            <!--  <com.google.android.material.textfield.TextInputLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="170dp"
+                  android:layout_gravity="bottom"
+                  android:layout_marginTop="50dp">
+
+                  <com.google.android.material.textfield.TextInputEditText
+                      android:id="@+id/answer_emp_essay"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:hint="Enter your answer"
+                      android:background="@drawable/border_sendanswer"
+                      android:inputType="text">
+
+                  </com.google.android.material.textfield.TextInputEditText>
+              </com.google.android.material.textfield.TextInputLayout>
+      -->
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/gradient_essay"
+                android:fontFamily="@font/capriola"
+                android:onClick="sendEssay"
+                android:text="Send"
+                android:textAllCaps="false"
+                android:textColor="@color/whiteText"
+                android:textSize="18sp"
+                android:textStyle="normal" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

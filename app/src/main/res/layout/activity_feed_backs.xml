@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context=".ui.UserSection.FeedBack">
+
+
+
+        <RelativeLayout
+            android:id="@+id/essay_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/primaryText">
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:onClick="goback"
+                android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Feedbacks"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/openfilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/montserrat"
+                android:onClick="openEditFilter"
+                android:src="@drawable/ic_search1" />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relaFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/editFilterObjective"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_filter"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/comfortaa_bold"
+            android:hint="Filter by dates"
+            android:inputType="textPhonetic"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/whichfeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/poppins"
+        android:textSize="14sp"
+        android:onClick="openEditFilter"
+        android:text="filter"
+        android:textColor="@color/black"
+      />
+
+    <TextView
+        android:id="@+id/checkfd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="openEditFilter"
+        android:text="filter"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:visibility="gone" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/gradientLightBlue" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_user_feedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/no_feedbacks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="You have no feedbacks"
+        android:textAlignment="center"
+        android:textColor="@color/cardColorRed"
+        android:fontFamily="@font/poppins"
+        android:visibility="gone"
+        android:textSize="14sp" />
+
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.FoldingCube"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackgroundBorderless"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/colorAccent" />
+
+</LinearLayout>

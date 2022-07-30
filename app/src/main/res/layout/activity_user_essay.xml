@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:background="@color/whiteText"
+    tools:context=".ui.UserSection.UserEssay">
+
+    <RelativeLayout
+        android:id="@+id/essay_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/gradient_essay">
+
+        <TextView
+            android:id="@+id/ddf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/poppins"
+            android:text="Sent Essays"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:textStyle="normal" />
+
+
+        <ImageView
+            android:id="@+id/back_img"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:onClick="goback"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+
+        <ImageView
+            android:id="@+id/openfilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="10dp"
+            android:fontFamily="@font/montserrat"
+            android:onClick="openEditFilter"
+            android:src="@drawable/ic_search1" />
+
+
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/feedback_essay_open"
+        android:layout_below="@+id/essay_toolbar"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+
+
+            <RelativeLayout
+                android:id="@+id/relaFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+                <EditText
+                    android:id="@+id/editFilterEssay"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/background_filter"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Filter"
+                    android:inputType="textPhonetic"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="7dp"
+                android:background="@drawable/gradient_essay"
+                android:backgroundTint="@color/gradientViolet"
+                android:visibility="gone"
+                android:src="@drawable/ic_feedback" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.2dp"
+                android:visibility="gone"
+                android:layout_marginBottom="10dp"
+                android:background="@color/gradientViolet" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_emplo_essay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/no_emplo_essay"
+                android:layout_width="260dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:fitsSystemWindows="true"
+                android:focusable="true"
+                android:visibility="gone"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="You have no essays"
+                    android:textAlignment="center"
+                    android:textColor="@color/cardColorRed"
+                    android:textSize="16sp" />
+            </androidx.cardview.widget.CardView>
+
+            <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.FoldingCube"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="?selectableItemBackgroundBorderless"
+                android:visibility="gone"
+                app:SpinKit_Color="@color/colorAccent" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/feedback_essay_open"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fitsSystemWindows="true"
+        android:focusable="true"
+        android:onClick="openFeedBackEssay"
+        android:visibility="visible"
+        app:cardBackgroundColor="@color/gradientViolet"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:text="View feedback"
+            android:textAlignment="center"
+
+            android:textColor="@color/whiteText"
+            android:textSize="14sp" />
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

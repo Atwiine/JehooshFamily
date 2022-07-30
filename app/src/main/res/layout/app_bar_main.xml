@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/contentBodyColor"
+    tools:context="ui.MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:visibility="gone"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        style="@style/DarkModeHidden"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/ic_topbk" />
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:onClick="openSettings"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:src="@drawable/ic_settings" />-->
+
+    <include layout="@layout/content_main"
+        />
+
+
+
+<!--
+    <com.gauravk.bubblenavigation.BubbleNavigationLinearView
+        android:id="@+id/bottom_navigation_view_linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:visibility="gone"
+        android:background="@color/colorWhite"
+        android:elevation="8dp"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bottom_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_active="true"
+            app:bt_colorActive="@color/red_active"
+            app:bt_colorInactive="@color/red_inactive"
+            app:bt_icon="@drawable/ic_home"
+            app:bt_shape="@drawable/transition_background_drawable_home"
+            app:bt_title="Home" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bottom_ask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_badgeBackgroundColor="@color/green_active"
+            app:bt_colorActive="@color/gradientViolet"
+            app:bt_colorInactive="@color/blue_inactive"
+            app:bt_icon="@drawable/ic_ask_qn"
+            app:bt_shape="@drawable/transition_background_drawable_search"
+            app:bt_title="Ask" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bottom_response"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/gradientLightYellow"
+            app:bt_colorInactive="@color/gradientLightOrange2"
+            app:bt_icon="@drawable/ic_responses"
+            app:bt_shape="@drawable/transition_background_drawable_like"
+            app:bt_title="Responses" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bottom_history"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/gradientLightBlue"
+            app:bt_colorInactive="@color/gradientLightGreen"
+            app:bt_icon="@drawable/ic_playlist"
+            app:bt_shape="@drawable/transition_background_drawable_list"
+            app:bt_title="History" />
+
+        <com.gauravk.bubblenavigation.BubbleToggleView
+            android:id="@+id/bottom_settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:bt_colorActive="@color/purple_active"
+            app:bt_colorInactive="@color/purple_inactive"
+            app:bt_icon="@drawable/ic_settings"
+            app:bt_shape="@drawable/transition_background_drawable_person"
+            app:bt_title="Settings" />
+    </com.gauravk.bubblenavigation.BubbleNavigationLinearView>
+
+    -->
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

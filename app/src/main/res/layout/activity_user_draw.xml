@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context=".ui.UserSection.UserDraw">
+
+        <RelativeLayout
+            android:id="@+id/essay_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/toolbar_drawing">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins_semibold"
+                android:text="Sent Drawing questions"
+                android:textColor="@color/whiteText"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="false"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:onClick="goback"
+                android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+
+            <ImageView
+                android:id="@+id/openfilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/montserrat"
+                android:onClick="openEditFilter"
+                android:text="filter"
+                android:textColor="@color/g2"
+                android:textSize="14sp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_search1" />
+
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relaFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/editFilterEssay"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_filter"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/poppins"
+            android:hint="Filter"
+            android:inputType="textPhonetic"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--        android:id="@+id/feedback_draw_open"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="bottom|end"-->
+<!--        android:layout_margin="7dp"-->
+<!--        android:background="@drawable/toolbar_drawing"-->
+<!--        android:backgroundTint="@color/g2"-->
+<!--        android:onClick="openFeedBackDraw"-->
+<!--        android:src="@drawable/ic_feedback" />-->
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_above="@+id/feedback_draw_open"
+        android:layout_below="@+id/essay_toolbar"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_emplo_draw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/no_emplo_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="You have no drawing questions"
+        android:textAlignment="center"
+        android:textColor="@color/cardColorRed"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/feedback_draw_open"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:fitsSystemWindows="true"
+        android:focusable="true"
+        android:onClick="openFeedBackDraw"
+        android:visibility="visible"
+        app:cardBackgroundColor="#22034E"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="3dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/poppins"
+            android:text="View feedback"
+            android:textAlignment="center"
+            android:textColor="@color/whiteText"
+            android:textSize="14sp" />
+    </androidx.cardview.widget.CardView>
+
+    <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.FoldingCube"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackgroundBorderless"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/colorAccent" />
+
+
+</RelativeLayout>

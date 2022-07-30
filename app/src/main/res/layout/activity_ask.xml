@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.Main_Functions.AskActivity">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_above="@+id/navigations"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/home_options_shape3">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:text="Set questions"
+                        android:drawablePadding="10dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/whiteTextColor"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="20sp"
+                    android:layout_marginEnd="20dp"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:elevation="44dp"
+                    android:src="@drawable/header_image" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="60dp"
+                    android:background="@drawable/refer_earn_button"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="goToResponses"
+                        android:fontFamily="@font/poppins"
+                        android:drawableEnd="@drawable/ic_baseline_keyboard_double_arrow_right_24"
+                        android:text="See all responses"
+                        android:drawablePadding="10dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/whiteTextColor"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:src="@drawable/refer_icon" />
+
+            </RelativeLayout>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+              >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--                essay part-->
+                    <RelativeLayout
+                        android:id="@+id/essy_ask"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/shape_essay_employee"
+                        android:minHeight="150dp"
+                        android:onClick="openEssay"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_essay_icon" />
+
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:text="Essay questions"
+                                android:textColor="@color/whiteTextColor"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <!--                objectives part-->
+                    <RelativeLayout
+                        android:id="@+id/objectives_ask"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/shape_object_employee"
+                        android:minHeight="150dp"
+                        android:onClick="openObjectives">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                               android:layout_margin="10dp"
+                                android:src="@drawable/ic_objective_icon" />
+
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:text="Objectives questions"
+                                android:textColor="@color/whiteTextColor"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--                voting part-->
+                    <RelativeLayout
+                        android:id="@+id/voting_ask"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/shape_vote_employee"
+                        android:minHeight="150dp"
+                        android:onClick="openVoting">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_vote_icon" />
+
+                            <TextView
+                                android:fontFamily="@font/poppins"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:text="Votes questions"
+                                android:textColor="@color/whiteTextColor"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <!--                drawing part-->
+                    <RelativeLayout
+                        android:id="@+id/drawing_ask"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="150dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/shape_draw_employee"
+                        android:minHeight="150dp"
+                        android:onClick="openDrawing">
+
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:adjustViewBounds="true"
+                                android:cropToPadding="true"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/ic_tools_icon" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginBottom="10dp"
+                                android:text="Drawing questions"
+                                android:fontFamily="@font/poppins"
+                                android:textColor="@color/whiteTextColor"
+                                android:textSize="14sp"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:elevation="10dp"
+        app:labelVisibilityMode="labeled"
+        app:itemBackground="?attr/colorPrimary"
+        app:itemIconTint="@drawable/selector_bottombar_item"
+        app:itemTextColor="@drawable/selector_bottombar_item"
+        app:menu="@menu/master_bottom_navigation" />
+
+</RelativeLayout>

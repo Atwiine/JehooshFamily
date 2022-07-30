@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.jehooshfamily">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:remove="android:maxSdkVersion"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_jehoosh_family_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_jehoosh_family_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true">
+        <activity
+            android:name="com.example.jehooshfamily.ui.preferrences.About"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.AskSection.DrawQns"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Drawing.Draw4"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Drawing.DrawUserMain"
+            />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Drawing.DrawActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.UserSection.FeedBack"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.example.jehooshfamily.ui.Drawing.DrawingAdmin" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Accounts.UserAccount"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Accounts.AdminAccount"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.MainActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.UserSection.AnswerUserEssay"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.UserSection.UserVote"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.UserSection.UserObjecitves"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.UserSection.UserEssay"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.UserSection.TypesQns"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.UserSection.LoginUser"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.UserSection.MainUser"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.ResponseSection.TotalResultsVotes"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.ResponseSection.AnswerObjectives"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.ResponseSection.DetailsAnswersEssays"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.ResponseSection.AnswersToEssays"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Main_Functions.MyResponses"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.ResponseSection.ResponseQnVotes"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.ResponseSection.ResponseQnObjective"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.ResponseSection.ResponseQnEssay"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.HistorySection.HistoryVoting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.HistorySection.HistoryObjectives"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.HistorySection.HistoryEssay"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Main_Functions.MyHistory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Main_Functions.SeeRegisteredUser"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Main_Functions.RegisterUser"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Login"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.AskSection.SendTo"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.AskSection.Essay"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.AskSection.Objectives"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Main_Functions.AskActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Register"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.AskSection.Voting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.ResponseSection.DetailsAnswersObjectives"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.UserSection.AnswerUserObjectives"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.UserSection.AnswerUserVoting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.ResponseSection.AnswerVotes"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Main_Functions.WelcomeActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.jehooshfamily.ui.preferrences.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.Drawing.UploadPicture"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name="com.example.jehooshfamily.ui.Drawing.TakeUpload" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.ResponseSection.ResponseQnDrawing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.ResponseSection.AnswersDrawing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.ResponseSection.DetailsAnswersDrawing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.HistorySection.HistoryDrawing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.UserSection.UserDraw"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.jehooshfamily.ui.UserSection.AnswerUserDrawing"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.Main_Functions.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.HomeOptions"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.AskSection.EditObjectives"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.AskSection.EditVoting"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ui.Drawing.DrawUserMainHigher" />
+        <!-- <activity android:name=".ui.HomeOptions" -->
+        <!-- android:theme="@style/AppTheme.NoActionBar"/> -->
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="net.smallacademy.android.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+<!--        <provider-->
+<!--            android:name="androidx.core.content.FileProvider"-->
+<!--            android:authorities="${applicationId}.fileprovider"-->
+<!--            android:exported="false"-->
+<!--            android:grantUriPermissions="true">-->
+<!--            <meta-data-->
+<!--                android:name="android.support.FILE_PROVIDER_PATHS"-->
+<!--                android:resource="@xml/file_paths" />-->
+<!--        </provider>-->
+    </application>
+
+</manifest>

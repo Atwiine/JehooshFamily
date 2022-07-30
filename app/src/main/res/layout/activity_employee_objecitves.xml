@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    tools:context=".ui.EmployeeSection.EmployeeObjecitves">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/essay_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/obj_btns_send"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="0dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="false"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/back_img"
+                android:fontFamily="@font/montserrat"
+                android:text="Objectives Answer"
+                android:textColor="@color/colorWhite"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="false"
+                android:layout_margin="5dp"
+                android:onClick="goback"
+                android:src="@drawable/back_btn" />
+
+            <TextView
+                android:id="@+id/openfilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:drawableTop="@drawable/ic_filter"
+                android:fontFamily="@font/montserrat"
+                android:onClick="openEditFilter"
+                android:text="filter"
+                android:textColor="@color/whiteText"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <RelativeLayout
+        android:id="@+id/relaFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/editFilterObjective"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_filter"
+            android:drawableRight="@drawable/ic_calendar"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/comfortaa_bold"
+            android:hint="Filter by dates"
+            android:inputType="number"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.2dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/gradientLightBlue" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_emplo_objective"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/no_emplo_objective"
+        android:layout_width="260dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:fitsSystemWindows="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:cardElevation="0dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="You have no objectives"
+            android:textAlignment="center"
+            android:textColor="@color/cardColorRed"
+            android:textSize="16sp" />
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

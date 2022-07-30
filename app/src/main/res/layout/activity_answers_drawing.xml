@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:background="@color/whiteText"
+    android:orientation="vertical"
+    tools:context=".ui.ResponseSection.AnswersDrawing">
+
+
+
+        <RelativeLayout
+            android:id="@+id/essay_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/toolbar_drawing"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins"
+                android:text="Drawing Answers"
+                android:textColor="@color/whiteText"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:onClick="goback"
+                android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="5dp"
+                android:id="@+id/export"
+                android:visibility="gone"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
+                android:onClick="exportEssay"
+                android:src="@drawable/export" />
+        </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!--EXPORTING AREAS-->
+            <LinearLayout
+                android:id="@+id/download_results_linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/toolbar_drawing"
+                android:gravity="center"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:gravity="center"
+                    android:text="Export complete"
+                    android:textColor="@color/whiteText"
+                    android:textSize="13sp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="250dp"
+                    android:layout_height="35dp"
+                    android:layout_margin="5dp"
+                    android:onClick="sendlinkFile"
+                    android:visibility="gone"
+                    app:cardBackgroundColor="@color/whiteBodyColor"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="10dp"
+                        android:fontFamily="@font/poppins_semibold"
+                        android:gravity="center"
+                        android:text="Get download link"
+                        android:textColor="#FF416C"
+                        android:textSize="13sp"
+                        />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="250dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="10dp"
+                    android:onClick="open_intents"
+                    android:visibility="visible"
+                    app:cardBackgroundColor="@color/whiteBodyColor"
+                    app:cardCornerRadius="5dp"
+                    app:cardElevation="3dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawablePadding="5dp"
+                        android:fontFamily="@font/poppins"
+                        android:gravity="center"
+                        android:text="Download and open file"
+                        android:textColor="#22034E"
+                        android:textSize="13sp"
+                        app:drawableStartCompat="@drawable/ic_baseline_download_24" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/montserrat"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:id="@+id/open_folder_show_doc"
+                    android:text="Open your documents to get the downloaded file, if its not shown, check your connection and try again "
+                    android:textColor="@color/whiteBodyColor"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/wrong_download_results_linear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="@drawable/toolbar_drawing"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/poppins"
+                    android:gravity="center"
+                    android:id="@+id/show_error"
+                    android:text="Something went wrong with the export, please check your connection and try again"
+                    android:textColor="@color/whiteBodyColor"
+                    android:textSize="13sp" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/resp_to_answer_qn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="Sent Question"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/resp_to_answer_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/poppins"
+                android:text="date"
+                android:textColor="@color/black"
+                android:textSize="13sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/resp_to_answer_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="id"
+                android:textColor="@color/black"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@drawable/toolbar_drawing" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_answer_drawing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp" />
+
+            <TextView
+                android:id="@+id/no_answer_draw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:fontFamily="@font/poppins"
+                android:text="Sorry, seems like this question has no answers"
+                android:textAlignment="center"
+                android:textColor="@color/cardColorRed"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <com.github.ybq.android.spinkit.SpinKitView xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/spin_kit"
+                style="@style/SpinKitView.FoldingCube"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="?selectableItemBackgroundBorderless"
+                android:visibility="gone"
+                app:SpinKit_Color="@color/colorAccent" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.Main_Functions.SeeRegisteredUser">
+
+    <LinearLayout
+        android:id="@+id/asdwe"
+        android:layout_above="@+id/navigations"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <RelativeLayout
+            android:id="@+id/regEmployee_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#00ADC1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/reground1"
+                android:fontFamily="@font/montserrat"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/back_img"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+                android:onClick="goback"
+                android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+            <TextView
+                android:id="@+id/aasa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins"
+                android:text="Registered users"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+
+            <ImageView
+                android:id="@+id/openfilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="10dp"
+                android:fontFamily="@font/montserrat"
+                android:onClick="openEditFilter"
+                android:src="@drawable/ic_search1"
+                android:text="filter"
+                android:textColor="@color/g2"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relaFilter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <EditText
+            android:id="@+id/editFilterEssay"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/background_filter"
+            android:drawableRight="@drawable/ic_calendar"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:fontFamily="@font/comfortaa_bold"
+            android:hint="Filter by names"
+            android:inputType="text"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_see_employee"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/aasa" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/no_employees"
+        android:layout_width="270dp"
+        android:layout_height="170dp"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:fitsSystemWindows="true"
+        android:focusable="auto"
+        android:visibility="gone"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="4dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:text="You don't have anybody registered \nto send to please first register your employees."
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/cardColorRed"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/register_card_employee"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/confirm_send_bnt"
+            android:onClick="goAddEmployees"
+            android:text="Register Employees"
+            android:textAllCaps="false"
+            android:textColor="@color/whiteText"
+            android:textSize="16sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/spin_kit"
+        style="@style/SpinKitView.FoldingCube"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:background="?selectableItemBackgroundBorderless"
+        android:visibility="gone"
+        app:SpinKit_Color="@color/colorAccent" />
+</LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigations"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="?android:attr/windowBackground"
+        android:foreground="?attr/selectableItemBackground"
+        app:elevation="10dp"
+        app:labelVisibilityMode="labeled"
+        app:itemBackground="?attr/colorPrimary"
+        app:itemIconTint="@drawable/selector_bottombar_item"
+        app:itemTextColor="@drawable/selector_bottombar_item"
+        app:menu="@menu/master_bottom_navigation" />
+</RelativeLayout>

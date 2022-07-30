@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gl="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.Main_Functions.MyResponses">
+
+    <ScrollView
+        android:layout_above="@+id/navigations"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/confirm_send_bnt">
+
+                <TextView
+                    style="@style/viewParent.headerText"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="10dp"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/poppins_semibold"
+                    android:text="Responses"
+                    android:textColor="@color/whiteCardColor" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/hero" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+
+                android:id="@+id/his_essay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="openRespEssay"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardPreventCornerOverlap="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/home_gradient_maths"
+                >
+
+                    <ImageView
+                        style="@style/homeCardImage"
+                        android:maxHeight="70dp"
+                        android:src="@drawable/ic_essay_icon" />
+
+                    <TextView
+                        android:id="@+id/textViewSub6Title"
+                        style="@style/viewParent.headerText.HomeCardTitle"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Essays Response"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/registered_employees_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="openRespObjectives"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardPreventCornerOverlap="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/gradient_users"
+           >
+
+                    <ImageView
+                        style="@style/homeCardImage"
+                        android:maxHeight="70dp"
+                        android:src="@drawable/ic_objective_icon" />
+
+                    <TextView
+                        android:id="@+id/textViewSub2Title"
+                        style="@style/viewParent.headerText.HomeCardTitle"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Objectives Response "
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ask_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="openRespVoting"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardPreventCornerOverlap="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/gradient_response"
+                   >
+
+                    <ImageView
+                        style="@style/homeCardImage"
+                        android:layout_alignParentEnd="true"
+                        android:maxHeight="70dp"
+                        android:src="@drawable/ic_vote_icon" />
+
+                    <TextView
+                        android:id="@+id/textViewSub1Title"
+                        style="@style/viewParent.headerText.HomeCardTitle"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Votes Response "
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ask_card_draw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:onClick="openRespDrawing"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp"
+                app:cardPreventCornerOverlap="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="100dp"
+                    android:padding="10dp"
+                    android:background="@drawable/gradient_drawing"
+                 >
+
+                    <ImageView
+                        style="@style/homeCardImage"
+                        android:layout_alignParentEnd="true"
+                        android:maxHeight="70dp"
+                        android:src="@drawable/ic_tools_icon" />
+
+                    <TextView
+                        android:id="@+id/textViewSub1Titless"
+                        style="@style/viewParent.headerText.HomeCardTitle"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/poppins"
+                        android:text="Drawing Response "
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:elevation="10dp"
+        app:labelVisibilityMode="labeled"
+        app:itemBackground="?attr/colorPrimary"
+        app:itemIconTint="@drawable/selector_bottombar_item"
+        app:itemTextColor="@drawable/selector_bottombar_item"
+        app:menu="@menu/master_bottom_navigation" />
+
+</RelativeLayout>

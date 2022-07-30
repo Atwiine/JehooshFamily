@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/drawable/background_store_btns.xml" value="0.1125" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/drawable/button_background_blue.xml" value="0.1125" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/drawable/home_options_shape2.xml" value="0.1125" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_answer_user_drawing.xml" value="0.16574074074074074" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_answers_to_essays.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_details_answers_objective.xml" value="0.16574074074074074" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_login_employee.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_main_employee.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_response_votes.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_types_qns.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/card_answer_objective.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/card_feedback.xml" value="0.22" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/card_my_history.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/totalresultsvotes.xml" value="0.20416666666666666" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

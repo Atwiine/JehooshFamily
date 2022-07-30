@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gl="http://schemas.android.com/tools"
+    style="@style/parent.contentLayout"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/viewParent.headerText"
+                android:text="Hello Kapil!" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:minHeight="200dp"
+                    app:cardBackgroundColor="#FF402D"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="10dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hello boss, welcome to the \nASK section of this app"
+                            android:textColor="@color/whiteBodyColor"
+                            android:textSize="17sp"
+                            android:textStyle="bold" />
+
+                        <!--                        <ProgressBar-->
+                        <!--                            android:layout_marginTop="15dp"-->
+                        <!--                            android:layout_width="150dp"-->
+                        <!--                            android:layout_height="5dp"-->
+                        <!--                            style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"-->
+                        <!--                            android:progress="60"-->
+                        <!--                            android:progressDrawable="@drawable/progress_drawable"/>-->
+
+                        <!--                        <TextView-->
+                        <!--                            android:layout_marginTop="15dp"-->
+                        <!--                            android:layout_width="wrap_content"-->
+                        <!--                            android:layout_height="wrap_content"-->
+                        <!--                            android:text="These are some of the options that we have"-->
+                        <!--                            android:textColor="@color/whiteBodyColor"-->
+                        <!--                            android:textStyle="bold"-->
+                        <!--                            android:textSize="13sp"/>-->
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:elevation="44dp"
+                    android:src="@drawable/header_image" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="60dp"
+                    android:background="@drawable/refer_earn_button"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="look for something nice to place here"
+                        android:textAlignment="center"
+                        android:textColor="@color/whiteTextColor"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:cropToPadding="true"
+                    android:src="@drawable/refer_icon" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    style="@style/viewParent.headerText"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Popular Courses" />
+
+                <TextView
+                    style="@style/viewParent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="See All"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/headerMoreTextSize"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <!--remove the below layout with recycler view, use card poplar courses as model for design-->
+
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!--                essay part-->
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/essy_ask"
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:minHeight="150dp"
+                        android:onClick="openEssay"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="10dp">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="150dp"
+                            android:padding="10dp"
+                            gl:end_color="@color/gradientLightBlue"
+                            gl:start_color="@color/gradientLightGreen">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:cropToPadding="true"
+                                    android:maxWidth="80dp"
+                                    android:src="@drawable/ic_writing1" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="Write Essays"
+                                    android:textColor="@color/whiteTextColor"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--                objectives part-->
+                    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/objectives_ask"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:minHeight="150dp"
+                        android:onClick="openObjectives"
+                        app:cardBackgroundColor="#FF402D"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="10dp">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            android:padding="10dp"
+                            gl:end_color="#FF416C"
+                            gl:start_color="#8A52E9">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:cropToPadding="true"
+                                    android:maxWidth="100dp"
+                                    android:src="@drawable/ic_target" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="Set Objectives"
+                                    android:textColor="@color/whiteTextColor"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--                voting part-->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/voting_ask"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:minHeight="150dp"
+                        android:onClick="openVoting"
+                        app:cardBackgroundColor="#FF402D"
+                        app:cardCornerRadius="16dp"
+                        app:cardElevation="10dp">
+
+                        <net.colindodd.gradientlayout.GradientRelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:minHeight="100dp"
+                            android:padding="10dp"
+                            gl:end_color="@color/gradientOrange"
+                            gl:start_color="@color/gradientLightYellow">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:adjustViewBounds="true"
+                                    android:cropToPadding="true"
+                                    android:maxWidth="100dp"
+                                    android:src="@drawable/ic_vote_icon" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginBottom="10dp"
+                                    android:text="Set Votes"
+                                    android:textColor="@color/whiteTextColor"
+                                    android:textSize="16sp"
+                                    android:textStyle="bold" />
+
+                            </LinearLayout>
+
+                        </net.colindodd.gradientlayout.GradientRelativeLayout>
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!--
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp">
+
+                            <TextView
+                                android:layout_alignParentTop="true"
+                                android:layout_alignParentLeft="true"
+                                android:text="Frutorials"
+                                style="@style/viewParent.headerText"/>
+
+                            <TextView
+                                android:layout_alignParentRight="true"
+                                style="@style/viewParent"
+                                android:text="See All"
+                                android:layout_centerVertical="true"
+                                android:textSize="@dimen/headerMoreTextSize"
+                                android:textColor="@color/primaryTextColor"
+                                android:textStyle="bold"/>
+
+                        </RelativeLayout>
+
+                        &lt;!&ndash;remove the below layout with recycler view, use card poplar courses as model for design&ndash;&gt;
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="20dp">
+
+                            <include layout="@layout/card_frutorials"/>
+                            <include layout="@layout/card_frutorials"/>
+                            <include layout="@layout/card_frutorials"/>
+
+                        </LinearLayout>-->
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

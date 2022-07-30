@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/contentBodyColor"
+    tools:context=".ui.preferrences.SettingsActivity">
+
+
+
+        <RelativeLayout
+            android:id="@+id/settings_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/reground1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/poppins"
+                android:text="Settings"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/profileCircleImageView"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/ic_jehoosh_family_logo" />
+
+                <TextView
+                    android:id="@+id/bossname"
+                    style="@style/viewParent.headerText"
+                    android:layout_marginTop="20dp"
+                    android:layout_toEndOf="@id/profileCircleImageView"
+                    android:fontFamily="@font/poppins"
+                    android:text="Kapil Mohan"
+                    android:textSize="14sp" />
+
+                <TextView
+                    style="@style/viewParent.headerText"
+                    android:layout_below="@id/bossname"
+                    android:layout_toEndOf="@id/profileCircleImageView"
+                    android:fontFamily="@font/poppins"
+                    android:text="Edit personal details"
+                    android:textColor="#5D5C5C"
+                    android:textSize="14sp" />
+
+                <!--            <ImageView-->
+                <!--                style="@style/viewParent"-->
+                <!--                android:layout_alignParentEnd="true"-->
+                <!--                android:layout_centerVertical="true"-->
+                <!--                android:src="@drawable/ic_more" />-->
+
+            </RelativeLayout>
+
+            <!-- <Switch
+                 android:id="@+id/darkModeSwitch"
+                 style="@style/settingsText"
+                 android:drawableLeft="@drawable/ic_dark_mode"
+                 android:text="Dark Mode" />-->
+
+            <TextView
+                android:fontFamily="@font/poppins"
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="Profile" />
+
+            <TextView
+                style="@style/viewParent.headerText.settingsTextIcon"
+                android:drawableStart="@drawable/ic_edit_profile"
+                android:fontFamily="@font/poppins"
+                android:onClick="goEditAdmin"
+                android:textSize="14sp"
+                android:text="Edit Profile" />
+
+            <TextView
+                style="@style/viewParent.headerText.settingsTextIcon"
+                android:drawableStart="@drawable/about1"
+                android:fontFamily="@font/poppins"
+                android:onClick="goAbout"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:text="About Us" />
+
+            <LinearLayout
+                android:id="@+id/verify_admin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text="Enter current password"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <EditText
+                    android:id="@+id/verfiy_admin_password"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/border_without_top"
+                    android:focusable="auto"
+                    android:hint="enter current password"
+                    android:inputType="textPassword"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/check_verfiy_pass"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/background_newanswers"
+                    android:fontFamily="@font/poppins"
+                    android:onClick="verify_passAdmin"
+                    android:text="Verify"
+                    android:textAllCaps="false"
+                    android:textColor="@color/whiteText"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+            <!--  <TextView
+                  style="@style/viewParent.headerText.settingsMiniTitle"
+                  android:text="Notifications" />
+
+              <Switch
+                  style="@style/settingsText"
+                  android:checked="true"
+                  android:drawableStart="@drawable/ic_notifications"
+                  android:fontFamily="@font/montserrat"
+                  android:onClick="goNotifications"
+                  android:text="Notifications" />-->
+
+            <TextView
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp"
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="Regional" />
+
+            <!--        <TextView-->
+            <!--            android:fontFamily="@font/montserrat"-->
+            <!--            android:onClick="goLanguage"-->
+            <!--            style="@style/viewParent.headerText.settingsTextIcon"-->
+            <!--            android:drawableLeft="@drawable/ic_languages"-->
+            <!--            android:text="Language" />-->
+
+            <TextView
+                style="@style/viewParent.headerText.settingsTextIcon"
+                android:drawableStart="@drawable/ic_logout"
+                android:onClick="goLogout"
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp"
+                android:text="Logout" />
+
+
+            <TextView
+                style="@style/viewParent.headerText.settingsMiniTitle"
+                android:text="App ver 1.0.0"
+                android:fontFamily="@font/poppins"
+                android:textSize="14sp"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
