@@ -8,15 +8,27 @@
         <entry key="..\:/installatons/JehooshFamily/app/src/main/res/drawable/home_options_shape2.xml" value="0.1125" />
         <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_answer_user_drawing.xml" value="0.16574074074074074" />
         <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_answers_to_essays.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_ask.xml" value="0.20416666666666666" />
         <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_details_answers_objective.xml" value="0.16574074074074074" />
         <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_login_employee.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_main.xml" value="0.16" />
         <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_main_employee.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_my_history.xml" value="0.33" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_my_responses.xml" value="0.5968882602545968" />
         <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_response_votes.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_see_registered_employees.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_settings.xml" value="0.16574074074074074" />
         <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_types_qns.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/activity_user_account.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/app_bar_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/bottom.xml" value="0.20416666666666666" />
         <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/card_answer_objective.xml" value="0.20416666666666666" />
         <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/card_feedback.xml" value="0.22" />
         <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/card_my_history.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/card_reg_employee.xml" value="0.25" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/content_main.xml" value="0.33" />
         <entry key="..\:/installatons/JehooshFamily/app/src/main/res/layout/totalresultsvotes.xml" value="0.20416666666666666" />
+        <entry key="..\:/installatons/JehooshFamily/app/src/main/res/menu/master_bottom_navigation.xml" value="0.16574074074074074" />
       </map>
     </option>
   </component>

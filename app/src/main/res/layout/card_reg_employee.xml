@@ -1,21 +1,27 @@
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+<androidx.cardview.widget.CardView
     android:id="@+id/linear_see_employees"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:layout_marginTop="10dp"
-    android:paddingBottom="10dp"
-    android:layout_marginBottom="10dp">
+    android:layout_height="wrap_content"
+    app:cardElevation="3dp"
+    app:cardCornerRadius="5dp"
+    android:layout_margin="10dp"
+ >
 
 
     <RelativeLayout
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
 
             android:layout_marginStart="40dp"
             android:orientation="vertical">
@@ -29,14 +35,14 @@
 
                 <TextView
                     android:id="@+id/e_name"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginBottom="5dp"
-                    android:fontFamily="@font/montserrat"
+                    android:fontFamily="@font/poppins_semibold"
                     android:text="Employee name"
                     android:textColor="@color/black"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
                     android:textStyle="normal" />
 
                 <TextView
@@ -66,18 +72,19 @@
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="0.7dp"
-                    android:layout_margin="6dp"
+                    android:layout_margin="2dp"
                     android:background="@color/colorAccent" />
 
                 <TextView
                     android:id="@+id/e_role"
-                    android:layout_width="200dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
                     android:layout_marginBottom="5dp"
                     android:text="role"
                     android:textColor="@color/miniTitle"
-                    android:textSize="16sp"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/poppins"
                     android:textStyle="normal"
                     android:visibility="visible" />
             </LinearLayout>
@@ -99,25 +106,27 @@
         </LinearLayout>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            app:cardBackgroundColor="@android:color/transparent"
-            app:cardCornerRadius="0dp"
-            app:cardElevation="5dp">
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="6dp"
+            android:layout_centerVertical="true"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="3dp">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:layout_margin="10dp"
+
                 android:adjustViewBounds="true"
                 android:cropToPadding="true"
-                android:maxWidth="70dp"
-                android:src="@drawable/ic_profile" />
+
+                android:src="@drawable/user" />
 
         </androidx.cardview.widget.CardView>
 
     </RelativeLayout>
 </androidx.cardview.widget.CardView>
 
+</RelativeLayout>
 

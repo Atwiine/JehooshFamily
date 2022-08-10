@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:gl="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     style="@style/parent.contentLayout"
-    android:orientation="vertical"
     android:background="#00000000"
+    android:layout_marginBottom="8dp"
+    android:orientation="vertical"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="ui.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_above="@+id/navigations"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_above="@+id/cce">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -29,9 +30,9 @@
                     android:layout_height="wrap_content">
 
                     <TextView
-                        android:layout_margin="8dp"
                         style="@style/viewParent.headerText"
                         android:layout_gravity="bottom"
+                        android:layout_margin="8dp"
                         android:fontFamily="@font/poppins"
                         android:text="Jehoash \nFamily" />
 
@@ -56,8 +57,8 @@
                             android:id="@+id/ask_card"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:onClick="openAsk"
                             android:layout_margin="10dp"
+                            android:onClick="openAsk"
                             app:cardCornerRadius="8dp"
                             app:cardElevation="8dp"
                             app:cardPreventCornerOverlap="true">
@@ -84,6 +85,7 @@
 
                             </RelativeLayout>
                         </androidx.cardview.widget.CardView>
+
                         <androidx.cardview.widget.CardView
                             android:id="@+id/reponse_card"
                             android:layout_width="match_parent"
@@ -97,10 +99,9 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:minHeight="100dp"
-                                android:padding="10dp"
                                 android:background="@drawable/gradient_response"
-                                >
+                                android:minHeight="100dp"
+                                android:padding="10dp">
 
                                 <ImageView
                                     style="@style/homeCardImage"
@@ -111,9 +112,9 @@
                                 <TextView
                                     android:id="@+id/textViewSub1Titles"
                                     style="@style/viewParent.headerText.HomeCardTitle"
+                                    android:layout_centerVertical="true"
                                     android:fontFamily="@font/poppins"
                                     android:text="My Responses"
-                                    android:layout_centerVertical="true"
                                     android:textSize="14sp" />
 
                             </RelativeLayout>
@@ -134,10 +135,9 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:minHeight="100dp"
-                                android:padding="10dp"
                                 android:background="@drawable/gradient_users"
-                                >
+                                android:minHeight="100dp"
+                                android:padding="10dp">
 
                                 <ImageView
                                     style="@style/homeCardImage"
@@ -147,9 +147,9 @@
                                 <TextView
                                     android:id="@+id/textViewSub6Title"
                                     style="@style/viewParent.headerText.HomeCardTitle"
+                                    android:layout_centerVertical="true"
                                     android:fontFamily="@font/poppins"
                                     android:text="Add Users"
-                                    android:layout_centerVertical="true"
                                     android:textSize="14sp" />
 
                             </RelativeLayout>
@@ -201,9 +201,9 @@
                             <RelativeLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
+                                android:background="@drawable/gradient_history"
                                 android:minHeight="100dp"
-                                android:padding="10dp"
-                                android:background="@drawable/gradient_history">
+                                android:padding="10dp">
 
                                 <ImageView
                                     style="@style/homeCardImage"
@@ -213,10 +213,10 @@
                                 <TextView
                                     android:id="@+id/textViewSub3Title"
                                     style="@style/viewParent.headerText.HomeCardTitle"
-                                    android:fontFamily="@font/poppins"
-                                    android:textSize="14sp"
                                     android:layout_centerVertical="true"
-                                    android:text="My History" />
+                                    android:fontFamily="@font/poppins"
+                                    android:text="My History"
+                                    android:textSize="14sp" />
 
 
                             </RelativeLayout>
@@ -230,22 +230,186 @@
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigations"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        android:background="?android:attr/windowBackground"
-        android:foreground="?attr/selectableItemBackground"
-        app:elevation="10dp"
-        app:labelVisibilityMode="labeled"
-        app:itemBackground="?attr/colorPrimary"
-        app:itemIconTint="@drawable/selector_bottombar_item"
-        app:itemTextColor="@drawable/selector_bottombar_item"
-        app:menu="@menu/master_bottom_navigation" />
+        android:background="@color/whiteText"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/grey_active"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/homeCardImage"
+                    android:maxHeight="40dp"
+                    android:src="@drawable/ic_home" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Home"
+                    android:textColor="@color/primaryText"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/grey_active"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/homeCardImage"
+                    android:maxHeight="40dp"
+                    android:src="@drawable/ic_ask_qn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Ask"
+                    android:textColor="@color/primaryText"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/grey_active"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/homeCardImage"
+                    android:maxHeight="40dp"
+                    android:src="@drawable/ic_responses" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Response"
+                    android:textColor="@color/primaryText"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/grey_active"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/homeCardImage"
+                    android:maxHeight="40dp"
+                    android:src="@drawable/ic_history_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="History"
+                    android:textColor="@color/primaryText"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/grey_active"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    style="@style/homeCardImage"
+                    android:maxHeight="40dp"
+                    android:src="@drawable/ic_settings" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins"
+                    android:text="Settings"
+                    android:textColor="@color/primaryText"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="5dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whiteBodyColor"
+            app:menu="@menu/master_bottom_navigation" />
+    </androidx.cardview.widget.CardView>
+
 </RelativeLayout>

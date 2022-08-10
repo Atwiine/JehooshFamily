@@ -2,6 +2,7 @@ package com.example.jehooshfamily.ui.Main_Functions;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -11,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.jehooshfamily.R;
+import com.example.jehooshfamily.ui.BottomNavigationViewHelper;
 import com.example.jehooshfamily.ui.MainActivity;
 import com.example.jehooshfamily.ui.ResponseSection.ResponseQnDrawing;
 import com.example.jehooshfamily.ui.ResponseSection.ResponseQnEssay;
@@ -34,6 +36,10 @@ public class MyResponses extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.navigations);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(2);
+        menuItem.setChecked(true);
 
     }
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener

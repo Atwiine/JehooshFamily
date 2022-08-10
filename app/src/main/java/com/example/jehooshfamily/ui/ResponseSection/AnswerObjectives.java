@@ -217,8 +217,7 @@ public class AnswerObjectives extends AppCompatActivity {
     private void getResponseObjectives() {
         final ProgressDialog dialog = new ProgressDialog(this);
         dialog.setMessage("Loading...");
-
-        spinKitView.setVisibility(View.VISIBLE);
+dialog.show();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, urls.RESPONSE_OBJECTIVES_ANSWER_URL,
                 new Response.Listener<String>() {
                     @Override
@@ -229,7 +228,7 @@ public class AnswerObjectives extends AppCompatActivity {
                             JSONArray tips = new JSONArray(response);
 
                             if (tips.length() == 0) {
-                                spinKitView.setVisibility(View.GONE);
+                                dialog.dismiss();
                                 no_answer_obj.setVisibility(View.VISIBLE);
                             } else {
                                 for (int i = 0; i < tips.length(); i++) {

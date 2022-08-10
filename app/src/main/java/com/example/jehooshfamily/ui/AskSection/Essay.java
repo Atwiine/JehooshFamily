@@ -175,6 +175,11 @@ public class Essay extends AppCompatActivity {
 
     }
 
+    /*clears the recyclerview once a message is sent*/
+    public void Clear() {
+        mData.clear();
+        essayQnsAdapter.notifyDataSetChanged();
+    }
 
     /* send  essay */
 
@@ -200,6 +205,7 @@ public class Essay extends AppCompatActivity {
                             String success = object.getString("success");
                             if (success.equals("1")) {
                                 dialog.dismiss();
+                                Clear();
                                 loadRecentEssay();//should reload the recent questions part
 //                                spinKitView.setVisibility(View.GONE);
                                 send_essay.setVisibility(View.VISIBLE);

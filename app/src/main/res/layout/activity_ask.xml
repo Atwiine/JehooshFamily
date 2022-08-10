@@ -10,7 +10,7 @@
 
 
     <androidx.core.widget.NestedScrollView
-        android:layout_above="@+id/navigations"
+        android:layout_above="@+id/cce"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -293,21 +293,22 @@
     </androidx.core.widget.NestedScrollView>
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigations"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        app:elevation="10dp"
-        app:labelVisibilityMode="labeled"
-        app:itemBackground="?attr/colorPrimary"
-        app:itemIconTint="@drawable/selector_bottombar_item"
-        app:itemTextColor="@drawable/selector_bottombar_item"
-        app:menu="@menu/master_bottom_navigation" />
+        android:layout_margin="8dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="5dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whiteBodyColor"
+            app:menu="@menu/master_bottom_navigation" />
+    </androidx.cardview.widget.CardView>
+
 
 </RelativeLayout>

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_height="match_parent"
     android:background="@color/contentBodyColor"
@@ -29,6 +30,8 @@
         </RelativeLayout>
 
     <ScrollView
+        android:layout_below="@+id/settings_toolbar"
+        android:layout_above="@+id/cce"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -199,4 +202,22 @@
 
         </LinearLayout>
     </ScrollView>
-</LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cce"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="5dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whiteBodyColor"
+            app:menu="@menu/master_bottom_navigation" />
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

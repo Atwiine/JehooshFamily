@@ -3,6 +3,7 @@ package com.example.jehooshfamily.ui.Main_Functions;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
@@ -17,6 +18,7 @@ import com.example.jehooshfamily.ui.AskSection.DrawQns;
 import com.example.jehooshfamily.ui.AskSection.Essay;
 import com.example.jehooshfamily.ui.AskSection.Objectives;
 import com.example.jehooshfamily.ui.AskSection.Voting;
+import com.example.jehooshfamily.ui.BottomNavigationViewHelper;
 import com.example.jehooshfamily.ui.MainActivity;
 import com.example.jehooshfamily.ui.preferrences.SettingsActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -35,6 +37,10 @@ public class AskActivity extends AppCompatActivity {
 
         bottomNavigationView = findViewById(R.id.navigations);
         bottomNavigationView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        BottomNavigationViewHelper.disableShiftMode(bottomNavigationView);
+        Menu menu = bottomNavigationView.getMenu();
+        MenuItem menuItem = menu.getItem(1);
+        menuItem.setChecked(true);
 
     }
 

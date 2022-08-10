@@ -148,7 +148,7 @@ public class DrawQns extends AppCompatActivity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                             no_drwqns.setVisibility(View.VISIBLE);
-                            Toast.makeText(DrawQns.this, "something went wrong, please try again", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(DrawQns.this, "something went wrong, please try again" , Toast.LENGTH_SHORT).show();
                         }
                     }
                 }, new Response.ErrorListener() {
@@ -173,6 +173,11 @@ public class DrawQns extends AppCompatActivity {
 
     }
 
+    /*clears the recyclerview once a message is sent*/
+    public void Clear() {
+        mData.clear();
+        drawQnsAdapter.notifyDataSetChanged();
+    }
     private void sendDrawQn() {
 
         final ProgressDialog dialog = new ProgressDialog(DrawQns.this);
@@ -191,6 +196,7 @@ public class DrawQns extends AppCompatActivity {
                             String success = object.getString("success");
                             if (success.equals("1")) {
                                 dialog.dismiss();
+                                Clear();
                                 loadRecentDrawingQns();// reload the recent questions after submitting the new question
                                 send_draw.setVisibility(View.VISIBLE);
                                 Toast.makeText(DrawQns.this, "Question sent successfully", Toast.LENGTH_LONG).show();
@@ -199,7 +205,7 @@ public class DrawQns extends AppCompatActivity {
                             }
                         } catch (JSONException e) {
                             e.printStackTrace();
-                            Toast.makeText(DrawQns.this, "Question not sent successful, please try again ", Toast.LENGTH_LONG).show();
+                            Toast.makeText(DrawQns.this, "Question not sent successful, please try again " +e.toString(), Toast.LENGTH_LONG).show();
                             dialog.dismiss();
                             send_draw.setVisibility(View.VISIBLE);
                         }

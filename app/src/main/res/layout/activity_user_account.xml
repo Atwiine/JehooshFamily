@@ -117,6 +117,8 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/edit_employee_role"
                             style="@style/modifiedEditText"
+                            android:enabled="false"
+                            android:focusable="false"
                             android:fontFamily="@font/poppins"
                             android:hint="User role"
                             android:inputType="text"

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:gl="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,10 +10,9 @@
     tools:context=".ui.Main_Functions.MyResponses">
 
     <ScrollView
-        android:layout_above="@+id/navigations"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-       >
+        android:layout_above="@+id/cce">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -30,10 +28,10 @@
                     style="@style/viewParent.headerText"
                     android:layout_gravity="bottom"
                     android:layout_margin="10dp"
-                    android:textSize="16sp"
                     android:fontFamily="@font/poppins_semibold"
                     android:text="Responses"
-                    android:textColor="@color/whiteCardColor" />
+                    android:textColor="@color/whiteCardColor"
+                    android:textSize="16sp" />
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -47,9 +45,9 @@
                 android:id="@+id/his_essay"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_marginTop="10dp"
                 android:onClick="openRespEssay"
-                android:layout_margin="10dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 app:cardPreventCornerOverlap="true">
@@ -57,10 +55,9 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:minHeight="100dp"
-                    android:padding="10dp"
                     android:background="@drawable/home_gradient_maths"
-                >
+                    android:minHeight="100dp"
+                    android:padding="10dp">
 
                     <ImageView
                         style="@style/homeCardImage"
@@ -84,9 +81,9 @@
                 android:id="@+id/registered_employees_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_marginTop="10dp"
                 android:onClick="openRespObjectives"
-                android:layout_margin="10dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 app:cardPreventCornerOverlap="true">
@@ -94,10 +91,9 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:minHeight="100dp"
-                    android:padding="10dp"
                     android:background="@drawable/gradient_users"
-           >
+                    android:minHeight="100dp"
+                    android:padding="10dp">
 
                     <ImageView
                         style="@style/homeCardImage"
@@ -119,9 +115,9 @@
                 android:id="@+id/ask_card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_marginTop="10dp"
                 android:onClick="openRespVoting"
-                android:layout_margin="10dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="8dp"
                 app:cardPreventCornerOverlap="true">
@@ -129,10 +125,9 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:minHeight="100dp"
-                    android:padding="10dp"
                     android:background="@drawable/gradient_response"
-                   >
+                    android:minHeight="100dp"
+                    android:padding="10dp">
 
                     <ImageView
                         style="@style/homeCardImage"
@@ -155,20 +150,19 @@
                 android:id="@+id/ask_card_draw"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="3dp"
                 android:layout_marginTop="10dp"
                 android:onClick="openRespDrawing"
-                android:layout_margin="10dp"
-                app:cardCornerRadius="8dp"
+                app:cardCornerRadius="5dp"
                 app:cardElevation="8dp"
                 app:cardPreventCornerOverlap="true">
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:minHeight="100dp"
-                    android:padding="10dp"
                     android:background="@drawable/gradient_drawing"
-                 >
+                    android:minHeight="100dp"
+                    android:padding="10dp">
 
                     <ImageView
                         style="@style/homeCardImage"
@@ -189,21 +183,21 @@
         </LinearLayout>
     </ScrollView>
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/navigations"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cce"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="10dp"
-        android:layout_marginBottom="10dp"
-        app:elevation="10dp"
-        app:labelVisibilityMode="labeled"
-        app:itemBackground="?attr/colorPrimary"
-        app:itemIconTint="@drawable/selector_bottombar_item"
-        app:itemTextColor="@drawable/selector_bottombar_item"
-        app:menu="@menu/master_bottom_navigation" />
+        android:layout_margin="8dp"
+        android:elevation="3dp"
+        app:cardCornerRadius="5dp">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/navigations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/whiteBodyColor"
+            app:menu="@menu/master_bottom_navigation" />
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
